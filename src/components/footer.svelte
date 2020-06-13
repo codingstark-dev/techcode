@@ -3,7 +3,9 @@
 
   import Playstore from "./Playstore.svelte";
 </script>
+<style>
 
+</style>
 <footer>
   <div class="border-separate border-b-2 border-gray-400 pt-3" />
   <div class="w-auto h-56 bg-indigo-500 ">

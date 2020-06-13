@@ -1,8 +1,11 @@
 <script>
+  import StoreData from "./../store.js";
   import Loading from "./../components/loading.svelte";
+  import { grid } from "./../grid.js";
   let loading = false;
   let pincode;
- let jsonData = [];
+  let moreData = false;
+  let data = [];
   const userAction = async () => {
     loading = true;
     // StoreData.set();
@@ -19,12 +22,19 @@
     ).finally(() => (loading = false));
     const myJson = await response.json();
     // console.log(myJson);
-    // StoreData.update(() => {
-    //   return myJson;
+    StoreData.update(() => {
+      return myJson;
+    });
+    // $StoreData[0].PostOffice.forEach(element => {
+    //   data = [element.Name, element.Block, ...data];
     // });
-    jsonData = myJson;
     // return loading = false;
-    console.log(myJson);
+    // console.log(data);
+    console.log($StoreData[0]);
+  };
+  const changeMore = (i) => {
+    moreData == false ? (moreData = true) : (moreData = false);
+    console.log($StoreData[0].PostOffice[i]);
   };
 </script>
 
@@ -32,6 +42,7 @@
   .topbadge {
     padding: 20px;
   }
+
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -41,13 +52,17 @@
   }
 </style>
 
+<svelte:head>
+  <link
+    href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+    rel="stylesheet" />
+</svelte:head>
 <div class="text-center topbadge">
   <h4>
     Get Pincode
     <span class="badge badge-light">New</span>
   </h4>
 </div>
-
 <div class="flex justify-center space-x-3">
   <input
     bind:value={pincode}
@@ -80,85 +95,49 @@
 
 {#if loading === true}
   <Loading />
-{:else}
-  <!-- else content here -->
 {/if}
-
-<div class="w-5/6 mx-auto">
-  <div class="bg-white shadow-md rounded my-6">
-    <table class="text-left w-full border-collapse">
-      <!--Border collapse doesn't work on this site yet but it's available in newer tailwind versions -->
-      <thead>
-        <tr>
-          <th
-            class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
-            text-grey-dark border-b border-grey-light">
-            State
-          </th>
-          <th
-            class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
-            text-grey-dark border-b border-grey-light">
-            Branch
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="hover:bg-grey-lighter">
-          <td class="py-4 px-6 border-b border-grey-light">New York</td>
-          <td class="py-4 px-6 border-b border-grey-light">
-            <a
-              href="#"
-              class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
-              bg-green hover:bg-green-dark">
-              Edit
-            </a>
-            <a
-              href="#"
-              class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
-              bg-blue hover:bg-blue-dark">
-              View
-            </a>
-          </td>
-        </tr>
-        <tr class="hover:bg-grey-lighter">
-          <td class="py-4 px-6 border-b border-grey-light">Paris</td>
-          <td class="py-4 px-6 border-b border-grey-light">
-            <a
-              href="#"
-              class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
-              bg-green hover:bg-green-dark">
-              Edit
-            </a>
-            <a
-              href="#"
-              class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
-              bg-blue hover:bg-blue-dark">
-              View
-            </a>
-          </td>
-        </tr>
-        <tr class="hover:bg-grey-lighter">
-          <td class="py-4 px-6 border-b border-grey-light">London</td>
-          <td class="py-4 px-6 border-b border-grey-light">
-            <a
-              href="#"
-              class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
-              bg-green hover:bg-green-dark">
-              Edit
-            </a>
-            <a
-              href="#"
-              class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
-              bg-blue hover:bg-blue-dark">
-              View
-            </a>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
+{#if $StoreData !== undefined}
+  <div class="w-5/6 mx-auto min-h-full pt-8">
+    <div class="bg-white shadow-md rounded ">
+      <table class="text-left w-full border-collapse min-h-full">
+        <thead>
+          <tr>
+            <th
+              class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
+              text-grey-dark border-b border-grey-light">
+              City
+            </th>
+            <th
+              class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
+              text-grey-dark border-b border-grey-light">
+              Detail
+            </th>
+          </tr>
+        </thead>
+        {#each $StoreData[0].PostOffice as item, i}
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">{item.Name}</td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                <button on:click={()=>changeMore(i)}>Know More</button>
+              {#if moreData == true}
+                 <!-- content here -->  <a
+                  href="https://www.google.com/search?q={item.Name}+in+{item.Circle}"
+                  rel="nofollow"
+                  target="_blank"
+                  class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
+                  bg-blue hover:bg-blue-dark">
+                  View
+                </a>
+              {/if}
+              
+              </td>
+            </tr>
+          </tbody>
+        {/each}
+      </table>
+    </div>
   </div>
-</div>
-{#each jsonData as item}
-   <p>{item.Massage}</p>
-{/each}
+
+  <!-- <div use:grid={data} /> -->
+{/if}

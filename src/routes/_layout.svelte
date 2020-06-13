@@ -8,27 +8,26 @@
 </script>
 
 <style>
-  main {
-    position: relative;
+  /* main {
     max-width: 56em;
     /* background-color: white; */
-    padding: 1em;
+    /* padding: 1em;
     margin: 0 auto;
-    box-sizing: border-box;
-  }
+    box-sizing: border-box; */
+   
+  /* }  */
 </style>
-
 
 <!-- <Nav {segment}/> -->
 
 <Header />
-<div class="bg-indigo-500 w-auto h-64 rounded-b-md">
+<!-- <div class="bg-indigo-500 w-auto rounded-b-md"> -->
+  <main class="pt-3 p-4 max-h-full min-h-screen">
 
-  <main class="pt-3">
     <slot />
   </main>
-</div>
+<!-- </div> -->
 
-<div class="h-64" />
-<div class="h-20" />
+<!-- <div class="h-64" /> -->
+<!-- <div class="max-h-full" /> -->
 <Footer />
