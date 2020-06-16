@@ -1,7 +1,7 @@
 <script>
   import StoreData from "./../store.js";
   import Loading from "./../components/loading.svelte";
-  import { grid } from "./../grid.js";
+  import Select from "svelte-select";
   let loading = false;
   let pincode;
   let moreData = false;
@@ -32,7 +32,7 @@
     // console.log(data);
     console.log($StoreData[0]);
   };
-  const changeMore = (i) => {
+  const changeMore = i => {
     moreData == false ? (moreData = true) : (moreData = false);
     console.log($StoreData[0].PostOffice[i]);
   };
@@ -52,11 +52,6 @@
   }
 </style>
 
-<svelte:head>
-  <link
-    href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
-    rel="stylesheet" />
-</svelte:head>
 <div class="text-center topbadge">
   <h4>
     Get Pincode
@@ -66,6 +61,7 @@
 <div class="flex justify-center space-x-3">
   <input
     bind:value={pincode}
+    autocomplete="on"
     type="number"
     class="bg-white focus:outline-none focus:shadow-outline border
     border-gray-300 rounded-lg py-2 px-4 block w-48 appearance-none
@@ -97,47 +93,115 @@
   <Loading />
 {/if}
 {#if $StoreData !== undefined}
-  <div class="w-5/6 mx-auto min-h-full pt-8">
-    <div class="bg-white shadow-md rounded ">
-      <table class="text-left w-full border-collapse min-h-full">
-        <thead>
-          <tr>
-            <th
-              class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
-              text-grey-dark border-b border-grey-light">
-              City
-            </th>
-            <th
-              class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
-              text-grey-dark border-b border-grey-light">
-              Detail
-            </th>
-          </tr>
-        </thead>
-        {#each $StoreData[0].PostOffice as item, i}
+  {#each $StoreData[0].PostOffice as item, i}
+    <!-- content here -->
+    <div class="p-4">
+      <h1>
+        PinCode: {item.Pincode}, {item.Name} Post Office, {item.Block}, {item.District},
+        {item.State}
+      </h1>
+    </div>
+    <div class="w-11/12 mx-auto min-h-full ">
+      <div class="bg-white shadow-md rounded ">
+        <table class="text-left w-full border-collapse min-h-full">
+          <thead>
+            <tr>
+              <th
+                class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
+                text-grey-dark border-b border-grey-light">
+                Post Office
+              </th>
+              <th
+                class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm
+                text-grey-dark border-b border-grey-light">
+                {item.Name}
+              </th>
+            </tr>
+          </thead>
+          <!-- {#each $StoreData[0].PostOffice as item, i}
+        <Select bind:value={item.Name} ></Select> -->
           <tbody>
             <tr class="hover:bg-grey-lighter">
-              <td class="py-4 px-6 border-b border-grey-light">{item.Name}</td>
               <td class="py-4 px-6 border-b border-grey-light">
-                <button on:click={()=>changeMore(i)}>Know More</button>
-              {#if moreData == true}
-                 <!-- content here -->  <a
-                  href="https://www.google.com/search?q={item.Name}+in+{item.Circle}"
+                Post Office Status
+              </td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                {item.BranchType} ({item.DeliveryStatus})
+                <!-- content here -->
+                <!-- <a
+                  href="https://www.google.com/search?q=+in+"
                   rel="nofollow"
                   target="_blank"
                   class="text-grey-lighter font-bold py-1 px-3 rounded text-xs
                   bg-blue hover:bg-blue-dark">
                   View
-                </a>
-              {/if}
-              
+                </a> -->
+
               </td>
             </tr>
           </tbody>
-        {/each}
-      </table>
-    </div>
-  </div>
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">PinCode</td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                {item.Pincode}
+              </td>
+            </tr>
+          </tbody>
 
-  <!-- <div use:grid={data} /> -->
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">Town/Taluk</td>
+              <td class="py-4 px-6 border-b border-grey-light">{item.Block}</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">District</td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                {item.District}
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">State</td>
+              <td class="py-4 px-6 border-b border-grey-light">{item.State}</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">
+                Postal Division
+              </td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                {item.Division}
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">
+                Postal Region
+              </td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                {item.Region}
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="hover:bg-grey-lighter">
+              <td class="py-4 px-6 border-b border-grey-light">
+                Postal Circle
+              </td>
+              <td class="py-4 px-6 border-b border-grey-light">
+                {item.Circle}
+              </td>
+            </tr>
+          </tbody>
+          <!-- {/each} -->
+        </table>
+      </div>
+    </div>
+  {/each}
 {/if}
