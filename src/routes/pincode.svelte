@@ -61,7 +61,7 @@
 <svelte:head>
   <title>Pincode Finder Tool Easiest Way To Find Pincode</title>
   <!-- <meta http-equiv="Cache-control" content="public" /> -->
-  <link rel="canonical" href="https://techcode.in" />
+  <link rel="canonical" href="https://techcode.in/pincode" />
   <meta
     name="keywords"
     content="Pincode Finder Tool, Pincode Finder India,Pincode Finder In India," />

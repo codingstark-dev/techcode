@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://techcode.in/sitemap.xml
