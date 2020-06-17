@@ -1,7 +1,7 @@
 <script>
   import StoreData from "./../store.js";
   import Loading from "./../components/loading.svelte";
-  import Select from "svelte-select";
+
   let loading = false;
   let pincode;
   let moreData = false;
