@@ -1,5 +1,8 @@
-<script>
+<script context="module">
   import Home from "./../shared/home.svelte";
+  export function preload({ params, query }) {
+    return this.fetch("sitemap.xml");
+  }
 </script>
 
 <style>
@@ -30,8 +33,6 @@
   p {
     margin: 1em auto;
   }
-
-
 </style>
 
 <svelte:head>
