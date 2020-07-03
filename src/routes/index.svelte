@@ -36,7 +36,7 @@
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>TechCode.in</title>
 </svelte:head>
 
 <Home />
