@@ -1,5 +1,5 @@
 <script>
-  import Card from "./../components/card.svelte";
+  import Card from "../../components/card.svelte";
 </script>
 
 <div
@@ -9,7 +9,7 @@
     class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
     md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
     <!-- Column Content -->
-    <Card links={'pincode-finder-india'}>
+    <Card links={'video-downloader/pinterest'}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="fill-current text-indigo-500 hover:text-indigo-400 w-24 h-24 mx-4"
@@ -45,7 +45,7 @@
     class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
     md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
     <!-- Column Content -->
-    <Card>
+    <Card links={'video-downloader/instagram'}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class=" w-20 h-20 mx-6 fill-current text-indigo-500
@@ -87,7 +87,7 @@
     class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
     md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
     <!-- Column Content -->
-    <Card links={'video-downloader'}>
+    <Card links={'video-downloader/twitter'}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class=" w-20 h-20 mx-6 fill-current text-indigo-500
@@ -120,7 +120,7 @@
     md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
     <!-- Column Content -->
 
-    <Card>
+    <Card links={'video-downloader/tumblr'}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
        class=" w-20 h-20 mx-6 fill-current text-indigo-500
