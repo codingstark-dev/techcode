@@ -41,9 +41,7 @@
     font-size: 15px;
     color: red;
   }
-  .lol {
-    padding-bottom: 10px;
-  }
+ 
   h1 {
     @apply font-semibold text-xl py-4;
   }
@@ -94,7 +92,7 @@
 {#if loading === true}
   <Loading />
 {:else if $StoreData === undefined}
-  
+  <div />
 {:else if $StoreData.status === false || $StoreData.code == 112 || $StoreData.code == 405 || $StoreData.code == 404 || $StoreData.code == 113 || $StoreData.code == 212}
   <h1 class="error">{$StoreData.msg}</h1>
 {:else}
@@ -167,7 +165,7 @@
 
         </div>
       </div>
-      <br>
+      <br />
     {/if}
 
     <!-- <div class=" embed-responsive-4by3 shadow-sm">
