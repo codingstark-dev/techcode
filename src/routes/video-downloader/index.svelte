@@ -123,7 +123,7 @@
     <Card links={'video-downloader/tumblr'}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-       class=" w-20 h-20 mx-6 fill-current text-indigo-500
+        class=" w-20 h-20 mx-6 fill-current text-indigo-500
         hover:text-indigo-400 pt-3"
         viewBox="0 0 24 24">
         <path
@@ -140,15 +140,126 @@
           2.492-3.263.013-.097.093-.1.094-.1h2.011l.059.059v2.81l.059.059h2.219l.058.059v2.217l-.058.059h-2.229l-.057.059v3.911c.014.839.417
           1.265 1.205 1.265.316 0 .65-.074.982-.201l.076.033z" />
       </svg>
-    
+
       <div class="mt-2">
         <span
           class="font-bold text-base font-sans text-indigo-500
           hover:text-indigo-400">
-         Tumblr 
+          Tumblr
+        </span>
+      </div>
+    </Card>
+  </div>
+  <div
+    class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
+    md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
+    <!-- Column Content -->
+    <Card links={'video-downloader/twitter'}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class=" w-20 h-20 mx-6 fill-current text-indigo-500
+        hover:text-indigo-400 pt-3"
+        viewBox="0 0 24 24">
+        <path
+          d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373
+          12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209
+          2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+      </svg>
+
+      <div class="mt-2">
+        <span
+          class="font-bold text-base font-sans text-indigo-500
+          hover:text-indigo-400">
+          Facebook
         </span>
       </div>
     </Card>
   </div>
 
+  <div
+    class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
+    md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
+    <!-- Column Content -->
+    <Card links={'video-downloader/twitter'}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class=" w-20 h-20 mx-6 fill-current text-indigo-500
+        hover:text-indigo-400 pt-3"
+        viewBox="0 0 24 24">
+        <path
+          d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373
+          12-12-5.373-12-12-12zm5.82 11.419c-1.306 2.792-4.463 6.595-6.458
+          6.595-1.966
+          0-2.25-4.192-3.324-6.983-.527-1.372-.868-1.058-1.858-.364l-.604-.779c1.444-1.27
+          2.889-2.745 3.778-2.826.998-.096 1.615.587 1.845 2.051.305 1.924.729
+          4.91 1.472 4.91.577 0 2.003-2.369
+          2.076-3.215.13-1.24-.912-1.277-1.815-.89 1.43-4.689 7.383-3.825 4.888
+          1.501z" />
+      </svg>
+
+      <div class="mt-2">
+        <span
+          class="font-bold text-base font-sans text-indigo-500
+          hover:text-indigo-400">
+          Vimeo
+        </span>
+      </div>
+    </Card>
+  </div>
+  <div
+    class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
+    md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
+    <!-- Column Content -->
+    <Card links={'video-downloader/twitter'}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class=" w-20 h-20 mx-6 fill-current text-indigo-500
+        hover:text-indigo-400 pt-3"
+        viewBox="0 0 24 24">
+        <path
+          d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373
+          12-12-5.373-12-12-12zm2.917 16.083c-1.145
+          0-2.177-.472-2.919-1.229-.74.758-1.771 1.229-2.915 1.229-2.255
+          0-4.083-1.828-4.083-4.083s1.828-4.083 4.083-4.083c1.144 0 2.175.472
+          2.915 1.229.742-.758 1.774-1.229 2.919-1.229 2.255 0 4.083 1.828 4.083
+          4.083s-1.828 4.083-4.083 4.083zm2.916-4.083c0 1.608-1.308 2.917-2.916
+          2.917s-2.917-1.309-2.917-2.917 1.309-2.917 2.917-2.917 2.916 1.309
+          2.916 2.917z" />
+      </svg>
+
+      <div class="mt-2">
+        <span
+          class="font-bold text-base font-sans text-indigo-500
+          hover:text-indigo-400">
+          Flickr
+        </span>
+      </div>
+    </Card>
+  </div>
+  <div
+    class="my-2 px-2 w-1/2 overflow-hidden sm:my-2 sm:px-2 sm:w-1/3 md:my-2
+    md:px-2 md:w-1/4 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4">
+    <!-- Column Content -->
+    <Card links={'video-downloader/twitter'}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#000000"
+        viewBox="0 0 24 24"
+         class=" w-20 h-20 mx-6 fill-current text-indigo-500
+        hover:text-indigo-400 pt-3">
+        <path
+          d="M 12 2 L 3 6 L 3 9.640625 L 12 14 L 17 11.566406 L 17 15.652344 L
+          12 18 L 7 15.648438 L 3 17.976563 L 12 22 L 21 18 L 21 6 Z M 12 10 L 8
+          8 L 12 6 L 16 8 Z" />
+      </svg>
+
+      <div class="mt-2">
+        <span
+          class="font-bold text-base font-sans text-indigo-500
+          hover:text-indigo-400">
+          9gag
+        </span>
+      </div>
+    </Card>
+  </div>
 </div>
