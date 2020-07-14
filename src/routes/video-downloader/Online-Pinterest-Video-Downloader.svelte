@@ -41,18 +41,60 @@
     font-size: 15px;
     color: red;
   }
- 
+
   h1 {
     @apply font-semibold text-xl py-4;
   }
   h2 {
-    @apply font-semibold text-lg py-2;
+    @apply font-semibold text-xl py-2;
   }
   p {
     @apply p-2;
   }
 </style>
 
+<svelte:head>
+  <title>Online Pinterest Video Downloader</title>
+  <!-- <meta http-equiv="Cache-control" content="public" /> -->
+  <link rel="canonical" href="https://techcode.in/video-downloader/Online-Pinterest-Video-Downloader" />
+  <meta
+    name="keywords"
+    content="Online Pinterest Video Downloader, download Pinterest videos,
+    DOWNLOAD PINTEREST VIDEOS FROM MOBILE" />
+
+  <meta
+    name="description"
+    content="Many users are wondering how do I download a video from Pinterest?
+    If you are one of them then the answer is TECHCODE (Online Pinterest Video
+    Downloader)" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://techcode.in" />
+  <meta property="og:title" content="Online Pinterest Video Downloader" />
+  <meta
+    property="og:description"
+    content="Many users are wondering how do I download a video from Pinterest?
+    If you are one of them then the answer is TECHCODE (Online Pinterest Video
+    Downloader)" />
+  <meta
+    property="og:image"
+    content="https://firebasestorage.googleapis.com/v0/b/myapps-2d147.appspot.com/o/Online%20Pinterest%20Video%20Downloader.webp?alt=media&token=74ceb103-75c0-422b-b928-b1148b0c7086" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://techcode.in" />
+  <meta property="twitter:title" content="Online Pinterest Video Downloader" />
+  <meta
+    property="twitter:description"
+    content="Many users are wondering how do I download a video from Pinterest?
+    If you are one of them then the answer is TECHCODE (Online Pinterest Video
+    Downloader)" />
+  <meta
+    property="twitter:image"
+    content="https://firebasestorage.googleapis.com/v0/b/myapps-2d147.appspot.com/o/Online%20Pinterest%20Video%20Downloader.webp?alt=media&token=74ceb103-75c0-422b-b928-b1148b0c7086" />
+
+</svelte:head>
 <!-- <div class="link pt-3 ">
   <div class="input-group mb-3 w-auto px-md-5 ">
     <input type="text" class="form-control" aria-describedby="button-addon2" />
@@ -74,8 +116,8 @@
     border-gray-300 rounded-md py-2 px-4 block w-full appearance-none
     leading-normal"
     type="text"
-    placeholder="Paster Your Link"
-    aria-label="Paster Your Link"
+    placeholder="Paste Your Pinterst Link"
+    aria-label="Paste Your Pinterst Link"
     bind:value={pinurl} />
   <button
     class="bg-white hover:bg-indigo-500 text-gray-800 font-semibold py-2 px-4
@@ -201,19 +243,12 @@
   <br style="box-sizing: border-box;" />
   Users spend time on Pinterest surfing videos and amazing images.
 </p>
-<h2
-  style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
-  normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent:
-  0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;
-  -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);
-  text-decoration-style: initial; text-decoration-color: initial; box-sizing:
-  border-box; margin: 0.83em 0px 0.5em; padding: 0px; border: 0px;
-  font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight:
-  500; font-stretch: inherit; font-size: 1.953em; line-height: 1.35;
-  font-family: Poppins, Helvetica, Arial, sans-serif; vertical-align: baseline;
-  color: rgb(0, 0, 0);">
-  Online Pinterest Video Downloader
-</h2>
+<h2 class="text-center">Online Pinterest Video Downloader</h2>
+
+<img
+  src="https://firebasestorage.googleapis.com/v0/b/myapps-2d147.appspot.com/o/Online%20Pinterest%20Video%20Downloader.webp?alt=media&token=74ceb103-75c0-422b-b928-b1148b0c7086"
+  alt="Online Pinterest Video Downloader" />
+
 <p
   style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
   normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align:
@@ -575,6 +610,9 @@
   0, 0);">
   HOW TO DOWNLOAD PINTEREST VIDEOS FROM DESKTOP ( MAC AND WINDOWS)
 </h3>
+<img
+  src="https://firebasestorage.googleapis.com/v0/b/myapps-2d147.appspot.com/o/Online%20Pinterest%20Videos%20Downloader.webp?alt=media&token=1dec8b20-b7a4-41b2-a919-df912d332cb5"
+  alt="Online Pinterest Video Downloader" />
 <p
   style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
   normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align:
@@ -686,7 +724,13 @@
   font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch:
   inherit; font-size: 16px; line-height: 1.7; font-family: Poppins, Helvetica,
   Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">
-  Step 4:
+  <span
+    style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px;
+    font-style: inherit; font-variant: inherit; font-weight: 700; font-stretch:
+    inherit; font-size: inherit; line-height: inherit; font-family: inherit;
+    vertical-align: baseline;">
+    Step 4:
+  </span>
 </p>
 <p
   style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
@@ -750,7 +794,13 @@
   font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch:
   inherit; font-size: 16px; line-height: 1.7; font-family: Poppins, Helvetica,
   Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">
-  Step6:
+  <span
+    style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px;
+    font-style: inherit; font-variant: inherit; font-weight: 700; font-stretch:
+    inherit; font-size: inherit; line-height: inherit; font-family: inherit;
+    vertical-align: baseline;">
+    Step 6:
+  </span>
 </p>
 <p
   style="font-style: normal; font-variant-ligatures: normal; font-variant-caps:
@@ -909,5 +959,5 @@
   font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch:
   inherit; font-size: 16px; line-height: 1.7; font-family: Poppins, Helvetica,
   Arial, sans-serif; vertical-align: baseline; color: rgb(0, 0, 0);">
-  Thank you.
+  <strong>Thank you.</strong>
 </p>
